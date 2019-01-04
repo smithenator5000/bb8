@@ -1,0 +1,570 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module BB8_driver</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>BB8_driver</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/matthew/Documents/BB8/SpheroBB8-python-master/BB8_driver.py">/home/matthew/Documents/BB8/SpheroBB8-python-master/BB8_driver.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bluepy.btle.html">bluepy.btle</a><br>
+<a href="operator.html">operator</a><br>
+</td><td width="25%" valign=top><a href="struct.html">struct</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="bluepy.btle.html#DefaultDelegate">bluepy.btle.DefaultDelegate</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="BB8_driver.html#BTInterface">BTInterface</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="threading.html#Thread">threading.Thread</a>(<a href="threading.html#_Verbose">threading._Verbose</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="BB8_driver.html#Sphero">Sphero</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BTInterface">class <strong>BTInterface</strong></a>(<a href="bluepy.btle.html#DefaultDelegate">bluepy.btle.DefaultDelegate</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BTInterface-__init__"><strong>__init__</strong></a>(self, deviceAddress)</dt></dl>
+
+<dl><dt><a name="BTInterface-cmd"><strong>cmd</strong></a>(self, did, cid, data<font color="#909090">=[]</font>, answer<font color="#909090">=True</font>, resetTimeout<font color="#909090">=True</font>)</dt></dl>
+
+<dl><dt><a name="BTInterface-disconnect"><strong>disconnect</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BTInterface-dumpCharacteristics"><strong>dumpCharacteristics</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BTInterface-getSpheroCharacteristic"><strong>getSpheroCharacteristic</strong></a>(self, fragment)</dt></dl>
+
+<dl><dt><a name="BTInterface-handleNotification"><strong>handleNotification</strong></a>(self, cHandle, data)</dt></dl>
+
+<dl><dt><a name="BTInterface-send"><strong>send</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="BTInterface-waitForNotifications"><strong>waitForNotifications</strong></a>(self, time)</dt></dl>
+
+<hr>
+Methods inherited from <a href="bluepy.btle.html#DefaultDelegate">bluepy.btle.DefaultDelegate</a>:<br>
+<dl><dt><a name="BTInterface-handleDiscovery"><strong>handleDiscovery</strong></a>(self, scanEntry, isNewDev, isNewData)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sphero">class <strong>Sphero</strong></a>(<a href="threading.html#Thread">threading.Thread</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="BB8_driver.html#Sphero">Sphero</a></dd>
+<dd><a href="threading.html#Thread">threading.Thread</a></dd>
+<dd><a href="threading.html#_Verbose">threading._Verbose</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Sphero-__init__"><strong>__init__</strong></a>(self, target_name<font color="#909090">='Sphero'</font>)</dt></dl>
+
+<dl><dt><a name="Sphero-add_async_callback"><strong>add_async_callback</strong></a>(self, callback_type, callback)</dt></dl>
+
+<dl><dt><a name="Sphero-add_sync_callback"><strong>add_sync_callback</strong></a>(self, callback_type, callback)</dt></dl>
+
+<dl><dt><a name="Sphero-assign_counter_value"><strong>assign_counter_value</strong></a>(self, counter, response)</dt><dd><tt><a href="#Sphero">Sphero</a>&nbsp;contains&nbsp;a&nbsp;32-bit&nbsp;counter&nbsp;that&nbsp;increments&nbsp;every&nbsp;millisecond<br>
+when&nbsp;it's&nbsp;not&nbsp;in&nbsp;the&nbsp;Idle&nbsp;state.&nbsp;It&nbsp;has&nbsp;no&nbsp;absolute&nbsp;meaning&nbsp;and&nbsp;is<br>
+reset&nbsp;for&nbsp;various&nbsp;reasons.&nbsp;This&nbsp;command&nbsp;assigns&nbsp;the&nbsp;counter&nbsp;a<br>
+specific&nbsp;value&nbsp;for&nbsp;subsequent&nbsp;sampling.<br>
+&nbsp;<br>
+:param&nbsp;counter:&nbsp;value&nbsp;to&nbsp;set&nbsp;the&nbsp;counter&nbsp;to.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-boost"><strong>boost</strong></a>(self, time, heading, response)</dt><dd><tt>This&nbsp;commands&nbsp;<a href="#Sphero">Sphero</a>&nbsp;to&nbsp;meet&nbsp;the&nbsp;provided&nbsp;heading,&nbsp;disable<br>
+stabilization&nbsp;and&nbsp;ramp&nbsp;the&nbsp;motors&nbsp;up&nbsp;to&nbsp;full-speed&nbsp;for&nbsp;a&nbsp;period&nbsp;of<br>
+time.&nbsp;The&nbsp;Time&nbsp;parameter&nbsp;is&nbsp;the&nbsp;duration&nbsp;in&nbsp;tenths&nbsp;of&nbsp;a<br>
+second.&nbsp;Setting&nbsp;it&nbsp;to&nbsp;zero&nbsp;enables&nbsp;constant&nbsp;boost&nbsp;until&nbsp;a&nbsp;Set<br>
+Stabilization&nbsp;command&nbsp;is&nbsp;received.<br>
+&nbsp;<br>
+:param&nbsp;time:&nbsp;duration&nbsp;of&nbsp;boost&nbsp;in&nbsp;tenths&nbsp;of&nbsp;seconds.<br>
+:param&nbsp;heading:&nbsp;the&nbsp;heading&nbsp;to&nbsp;travel&nbsp;while&nbsp;boosting.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-clamp"><strong>clamp</strong></a>(self, n, minn, maxn)</dt></dl>
+
+<dl><dt><a name="Sphero-clear_counters"><strong>clear_counters</strong></a>(self, response)</dt><dd><tt>This&nbsp;is&nbsp;a&nbsp;developers-only&nbsp;command&nbsp;to&nbsp;clear&nbsp;the&nbsp;various&nbsp;system<br>
+counters&nbsp;described&nbsp;in&nbsp;the&nbsp;level&nbsp;2&nbsp;diag.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-config_collision_detect"><strong>config_collision_detect</strong></a>(self, method, Xt, Xspd, Yt, Yspd, ignore_time, response)</dt><dd><tt>This&nbsp;command&nbsp;either&nbsp;enables&nbsp;or&nbsp;disables&nbsp;asynchronous&nbsp;message<br>
+generation&nbsp;when&nbsp;a&nbsp;collision&nbsp;is&nbsp;detected.The&nbsp;Ignore&nbsp;Time&nbsp;parameter<br>
+disables&nbsp;collision&nbsp;detection&nbsp;for&nbsp;a&nbsp;period&nbsp;of&nbsp;time&nbsp;after&nbsp;the&nbsp;async<br>
+message&nbsp;is&nbsp;generated,&nbsp;preventing&nbsp;message&nbsp;overload&nbsp;to&nbsp;the<br>
+client.&nbsp;The&nbsp;value&nbsp;is&nbsp;in&nbsp;10&nbsp;millisecond&nbsp;increments.<br>
+&nbsp;<br>
+:param&nbsp;method:&nbsp;Detection&nbsp;method&nbsp;type&nbsp;to&nbsp;use.&nbsp;Currently&nbsp;the&nbsp;only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method&nbsp;supported&nbsp;is&nbsp;01h.&nbsp;Use&nbsp;00h&nbsp;to&nbsp;completely&nbsp;disable&nbsp;this&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.<br>
+:param&nbsp;Xt,&nbsp;Yt:&nbsp;An&nbsp;8-bit&nbsp;settable&nbsp;threshold&nbsp;for&nbsp;the&nbsp;X&nbsp;(left/right)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Y&nbsp;(front/back)&nbsp;axes&nbsp;of&nbsp;<a href="#Sphero">Sphero</a>.&nbsp;A&nbsp;value&nbsp;of&nbsp;00h&nbsp;disables&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contribution&nbsp;of&nbsp;that&nbsp;axis.<br>
+:param&nbsp;Xspd,Yspd:&nbsp;An&nbsp;8-bit&nbsp;settable&nbsp;speed&nbsp;value&nbsp;for&nbsp;the&nbsp;X&nbsp;and&nbsp;Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;axes.&nbsp;This&nbsp;setting&nbsp;is&nbsp;ranged&nbsp;by&nbsp;the&nbsp;speed,&nbsp;then&nbsp;added&nbsp;to&nbsp;Xt,&nbsp;Yt&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;generate&nbsp;the&nbsp;final&nbsp;threshold&nbsp;value.<br>
+:param&nbsp;ignore_time:&nbsp;An&nbsp;8-bit&nbsp;post-collision&nbsp;dead&nbsp;time&nbsp;to&nbsp;prevent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retriggering;&nbsp;specified&nbsp;in&nbsp;10ms&nbsp;increments.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-connect"><strong>connect</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-create_mask_list"><strong>create_mask_list</strong></a>(self, mask1, mask2)</dt></dl>
+
+<dl><dt><a name="Sphero-data2hexstr"><strong>data2hexstr</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="Sphero-disconnect"><strong>disconnect</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-get_app_config_blk"><strong>get_app_config_blk</strong></a>(self, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;application&nbsp;configuration&nbsp;block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that&nbsp;is&nbsp;set&nbsp;aside&nbsp;for&nbsp;exclusive&nbsp;use&nbsp;by&nbsp;applications.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-get_auto_reconnect"><strong>get_auto_reconnect</strong></a>(self, response)</dt><dd><tt>This&nbsp;returns&nbsp;the&nbsp;Bluetooth&nbsp;auto&nbsp;reconnect&nbsp;values&nbsp;as&nbsp;defined&nbsp;in&nbsp;the<br>
+Set&nbsp;Auto&nbsp;Reconnect&nbsp;command.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-get_bt_name"><strong>get_bt_name</strong></a>(self, response)</dt><dd><tt>This&nbsp;returns&nbsp;the&nbsp;textual&nbsp;name&nbsp;(in&nbsp;ASCII)&nbsp;that&nbsp;the&nbsp;Bluetooth&nbsp;module<br>
+advertises.&nbsp;It&nbsp;also&nbsp;returns&nbsp;the&nbsp;BTA&nbsp;Bluetooth&nbsp;Address&nbsp;or&nbsp;MAC&nbsp;ID<br>
+for&nbsp;this&nbsp;device.&nbsp;Both&nbsp;values&nbsp;are&nbsp;returned&nbsp;in&nbsp;ASCII&nbsp;and&nbsp;have&nbsp;field<br>
+widths&nbsp;of&nbsp;16&nbsp;characters,&nbsp;with&nbsp;unused&nbsp;trailing&nbsp;characters&nbsp;set&nbsp;to<br>
+00h.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-get_power_state"><strong>get_power_state</strong></a>(self, response)</dt><dd><tt>This&nbsp;returns&nbsp;the&nbsp;current&nbsp;power&nbsp;state&nbsp;and&nbsp;some&nbsp;additional<br>
+parameters&nbsp;to&nbsp;the&nbsp;Client.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-get_rgb_led"><strong>get_rgb_led</strong></a>(self, response)</dt><dd><tt>This&nbsp;retrieves&nbsp;the&nbsp;"user&nbsp;LED&nbsp;color"&nbsp;which&nbsp;is&nbsp;stored&nbsp;in&nbsp;the&nbsp;config<br>
+block&nbsp;(which&nbsp;may&nbsp;or&nbsp;may&nbsp;not&nbsp;be&nbsp;actively&nbsp;driven&nbsp;to&nbsp;the&nbsp;RGB&nbsp;LED).<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-get_version"><strong>get_version</strong></a>(self, response)</dt><dd><tt>The&nbsp;Get&nbsp;Versioning&nbsp;command&nbsp;returns&nbsp;a&nbsp;whole&nbsp;slew&nbsp;of&nbsp;software&nbsp;and<br>
+hardware&nbsp;information.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-go_to_sleep"><strong>go_to_sleep</strong></a>(self, time, macro, response)</dt><dd><tt>This&nbsp;puts&nbsp;<a href="#Sphero">Sphero</a>&nbsp;to&nbsp;sleep&nbsp;immediately&nbsp;with&nbsp;two&nbsp;parameters:&nbsp;the<br>
+first&nbsp;is&nbsp;the&nbsp;number&nbsp;of&nbsp;seconds&nbsp;after&nbsp;which&nbsp;it&nbsp;will&nbsp;automatically<br>
+re-awaken.&nbsp;If&nbsp;set&nbsp;to&nbsp;zero,&nbsp;this&nbsp;feature&nbsp;is&nbsp;disabled.&nbsp;If&nbsp;non-zero&nbsp;then<br>
+the&nbsp;MACRO&nbsp;parameter&nbsp;allows&nbsp;an&nbsp;optional&nbsp;system&nbsp;macro&nbsp;to&nbsp;be&nbsp;run&nbsp;upon<br>
+wakeup.&nbsp;If&nbsp;this&nbsp;is&nbsp;set&nbsp;to&nbsp;zero,&nbsp;no&nbsp;macro&nbsp;is&nbsp;executed.<br>
+&nbsp;<br>
+:param&nbsp;time:&nbsp;number&nbsp;of&nbsp;seconds&nbsp;wait&nbsp;before&nbsp;auto&nbsp;re-awake.<br>
+:param&nbsp;macro:&nbsp;macro&nbsp;number&nbsp;to&nbsp;run&nbsp;when&nbsp;re-awakened.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-inc_seq"><strong>inc_seq</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-pack_cmd"><strong>pack_cmd</strong></a>(self, req, cmd)</dt></dl>
+
+<dl><dt><a name="Sphero-parse_collision_detect"><strong>parse_collision_detect</strong></a>(self, data, data_length)</dt><dd><tt>The&nbsp;data&nbsp;payload&nbsp;of&nbsp;the&nbsp;async&nbsp;message&nbsp;is&nbsp;10h&nbsp;bytes&nbsp;long&nbsp;and<br>
+formatted&nbsp;as&nbsp;follows::<br>
+&nbsp;<br>
+&nbsp;&nbsp;-----------------------------------------------------------------<br>
+&nbsp;&nbsp;|X&nbsp;|&nbsp;Y&nbsp;|&nbsp;Z&nbsp;|&nbsp;AXIS&nbsp;|&nbsp;xMagnitude&nbsp;|&nbsp;yMagnitude&nbsp;|&nbsp;Speed&nbsp;|&nbsp;Timestamp&nbsp;|<br>
+&nbsp;&nbsp;-----------------------------------------------------------------<br>
+&nbsp;<br>
+*&nbsp;X,&nbsp;Y,&nbsp;Z&nbsp;-&nbsp;Impact&nbsp;components&nbsp;normalized&nbsp;as&nbsp;a&nbsp;signed&nbsp;16-bit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.&nbsp;Use&nbsp;these&nbsp;to&nbsp;determine&nbsp;the&nbsp;direction&nbsp;of&nbsp;collision&nbsp;event.&nbsp;If&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you&nbsp;don't&nbsp;require&nbsp;this&nbsp;level&nbsp;of&nbsp;fidelity,&nbsp;the&nbsp;two&nbsp;Magnitude&nbsp;fields&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encapsulate&nbsp;the&nbsp;same&nbsp;data&nbsp;in&nbsp;pre-processed&nbsp;format.<br>
+*&nbsp;Axis&nbsp;-&nbsp;This&nbsp;bitfield&nbsp;specifies&nbsp;which&nbsp;axes&nbsp;had&nbsp;their&nbsp;trigger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thresholds&nbsp;exceeded&nbsp;to&nbsp;generate&nbsp;the&nbsp;event.&nbsp;Bit&nbsp;0&nbsp;(01h)&nbsp;signifies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;X&nbsp;axis&nbsp;and&nbsp;bit&nbsp;1&nbsp;(02h)&nbsp;the&nbsp;Y&nbsp;axis.<br>
+*&nbsp;xMagnitude&nbsp;-&nbsp;This&nbsp;is&nbsp;the&nbsp;power&nbsp;that&nbsp;crossed&nbsp;the&nbsp;programming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;threshold&nbsp;Xt&nbsp;+&nbsp;Xs.<br>
+*&nbsp;yMagnitude&nbsp;-&nbsp;This&nbsp;is&nbsp;the&nbsp;power&nbsp;that&nbsp;crossed&nbsp;the&nbsp;programming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;threshold&nbsp;Yt&nbsp;+&nbsp;Ys.<br>
+*&nbsp;Speed&nbsp;-&nbsp;The&nbsp;speed&nbsp;of&nbsp;<a href="#Sphero">Sphero</a>&nbsp;when&nbsp;the&nbsp;impact&nbsp;was&nbsp;detected.<br>
+*&nbsp;Timestamp&nbsp;-&nbsp;The&nbsp;millisecond&nbsp;timer&nbsp;value&nbsp;at&nbsp;the&nbsp;time&nbsp;of&nbsp;impact;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refer&nbsp;to&nbsp;the&nbsp;documentation&nbsp;of&nbsp;CID&nbsp;50h&nbsp;and&nbsp;51h&nbsp;to&nbsp;make&nbsp;sense&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-parse_data_strm"><strong>parse_data_strm</strong></a>(self, data, data_length)</dt></dl>
+
+<dl><dt><a name="Sphero-parse_pwr_notify"><strong>parse_pwr_notify</strong></a>(self, data, data_length)</dt><dd><tt>The&nbsp;data&nbsp;payload&nbsp;of&nbsp;the&nbsp;async&nbsp;message&nbsp;is&nbsp;1h&nbsp;bytes&nbsp;long&nbsp;and<br>
+formatted&nbsp;as&nbsp;follows::<br>
+&nbsp;<br>
+&nbsp;&nbsp;--------<br>
+&nbsp;&nbsp;|State&nbsp;|<br>
+&nbsp;&nbsp;--------<br>
+&nbsp;<br>
+The&nbsp;power&nbsp;state&nbsp;byte:<br>
+&nbsp;&nbsp;*&nbsp;01h&nbsp;=&nbsp;Battery&nbsp;Charging,<br>
+&nbsp;&nbsp;*&nbsp;02h&nbsp;=&nbsp;Battery&nbsp;OK,<br>
+&nbsp;&nbsp;*&nbsp;03h&nbsp;=&nbsp;Battery&nbsp;Low,<br>
+&nbsp;&nbsp;*&nbsp;04h&nbsp;=&nbsp;Battery&nbsp;Critical</tt></dd></dl>
+
+<dl><dt><a name="Sphero-ping"><strong>ping</strong></a>(self, response)</dt><dd><tt>The&nbsp;Ping&nbsp;command&nbsp;is&nbsp;used&nbsp;to&nbsp;verify&nbsp;both&nbsp;a&nbsp;solid&nbsp;data&nbsp;link&nbsp;with&nbsp;the<br>
+Client&nbsp;and&nbsp;that&nbsp;<a href="#Sphero">Sphero</a>&nbsp;is&nbsp;awake&nbsp;and&nbsp;dispatching&nbsp;commands.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-poll_packet_times"><strong>poll_packet_times</strong></a>(self, time, response)</dt><dd><tt>This&nbsp;command&nbsp;helps&nbsp;the&nbsp;Client&nbsp;application&nbsp;profile&nbsp;the&nbsp;transmission<br>
+and&nbsp;processing&nbsp;latencies&nbsp;in&nbsp;<a href="#Sphero">Sphero</a>&nbsp;so&nbsp;that&nbsp;a&nbsp;relative<br>
+synchronization&nbsp;of&nbsp;timebases&nbsp;can&nbsp;be&nbsp;performed.&nbsp;It&nbsp;allows&nbsp;the<br>
+Client&nbsp;to&nbsp;reconcile&nbsp;time&nbsp;stamped&nbsp;messages&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>&nbsp;to&nbsp;its&nbsp;own<br>
+time&nbsp;stamped&nbsp;events.<br>
+&nbsp;<br>
+The&nbsp;scheme&nbsp;is&nbsp;as&nbsp;follows:&nbsp;the&nbsp;Client&nbsp;sends&nbsp;the&nbsp;command&nbsp;with&nbsp;the<br>
+Client&nbsp;Tx&nbsp;time&nbsp;(:math:`T_{1}`)&nbsp;filled&nbsp;in.&nbsp;Upon&nbsp;receipt&nbsp;of&nbsp;the&nbsp;packet,&nbsp;the<br>
+command&nbsp;processor&nbsp;in&nbsp;<a href="#Sphero">Sphero</a>&nbsp;copies&nbsp;that&nbsp;time&nbsp;into&nbsp;the&nbsp;response<br>
+packet&nbsp;and&nbsp;places&nbsp;the&nbsp;current&nbsp;value&nbsp;of&nbsp;the&nbsp;millisecond&nbsp;counter<br>
+into&nbsp;the&nbsp;<a href="#Sphero">Sphero</a>&nbsp;Rx&nbsp;time&nbsp;field&nbsp;(:math:`T_{2}`).&nbsp;Just&nbsp;before&nbsp;the&nbsp;transmit<br>
+engine&nbsp;streams&nbsp;it&nbsp;into&nbsp;the&nbsp;Bluetooth&nbsp;module,&nbsp;the&nbsp;<a href="#Sphero">Sphero</a>&nbsp;Tx&nbsp;time<br>
+value&nbsp;(:math:`T_{3}`)&nbsp;&nbsp;is&nbsp;filled&nbsp;in.&nbsp;If&nbsp;the&nbsp;Client&nbsp;then&nbsp;records&nbsp;the&nbsp;time&nbsp;at<br>
+which&nbsp;the&nbsp;response&nbsp;is&nbsp;received&nbsp;(:math:`T_{4}`)&nbsp;the&nbsp;relevant&nbsp;time&nbsp;segments&nbsp;can<br>
+be&nbsp;computed&nbsp;from&nbsp;the&nbsp;four&nbsp;time&nbsp;stamps&nbsp;(:math:`T_{1},&nbsp;T_{2},&nbsp;T_{3},&nbsp;T_{4}`):<br>
+&nbsp;<br>
+*&nbsp;The&nbsp;value&nbsp;offset&nbsp;represents&nbsp;the&nbsp;maximum-likelihood&nbsp;time&nbsp;offset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;Client&nbsp;clock&nbsp;to&nbsp;<a href="#Sphero">Sphero</a>'s&nbsp;system&nbsp;clock.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;offset&nbsp;:math:`=&nbsp;1/2*[(T_{2}&nbsp;-&nbsp;T_{1})&nbsp;+&nbsp;(T_{3}&nbsp;&nbsp;-&nbsp;T_{4})]`<br>
+&nbsp;<br>
+*&nbsp;The&nbsp;value&nbsp;delay&nbsp;represents&nbsp;the&nbsp;round-trip&nbsp;delay&nbsp;between&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client&nbsp;and&nbsp;<a href="#Sphero">Sphero</a>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;delay&nbsp;:math:`=&nbsp;(T_{4}&nbsp;-&nbsp;T_{1})&nbsp;-&nbsp;(T_{3}&nbsp;-&nbsp;T_{2})`<br>
+&nbsp;<br>
+:param&nbsp;time:&nbsp;client&nbsp;Tx&nbsp;time.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-recv"><strong>recv</strong></a>(self, num_bytes)</dt><dd><tt>Commands&nbsp;are&nbsp;acknowledged&nbsp;from&nbsp;the&nbsp;<a href="#Sphero">Sphero</a>&nbsp;-&gt;&nbsp;Client&nbsp;in&nbsp;the<br>
+following&nbsp;format::<br>
+&nbsp;<br>
+&nbsp;&nbsp;-------------------------------------------------<br>
+&nbsp;&nbsp;|SOP1&nbsp;|&nbsp;SOP2&nbsp;|&nbsp;MSRP&nbsp;|&nbsp;SEQ&nbsp;|&nbsp;DLEN&nbsp;|&nbsp;&lt;data&gt;&nbsp;|&nbsp;CHK&nbsp;|<br>
+&nbsp;&nbsp;-------------------------------------------------<br>
+&nbsp;<br>
+*&nbsp;SOP1&nbsp;-&nbsp;Start&nbsp;Packet&nbsp;1&nbsp;-&nbsp;Always&nbsp;0xff.<br>
+*&nbsp;SOP2&nbsp;-&nbsp;Start&nbsp;Packet&nbsp;2&nbsp;-&nbsp;Set&nbsp;to&nbsp;0xff&nbsp;when&nbsp;this&nbsp;is&nbsp;an&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acknowledgement,&nbsp;0xfe&nbsp;otherwise.<br>
+*&nbsp;MSRP&nbsp;-&nbsp;Message&nbsp;Response&nbsp;-&nbsp;This&nbsp;is&nbsp;generated&nbsp;by&nbsp;the&nbsp;message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decoder&nbsp;of&nbsp;the&nbsp;virtual&nbsp;device.<br>
+*&nbsp;SEQ&nbsp;-&nbsp;Sequence&nbsp;Number&nbsp;-&nbsp;Echoed&nbsp;to&nbsp;the&nbsp;client&nbsp;when&nbsp;this&nbsp;is&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direct&nbsp;message&nbsp;response&nbsp;(set&nbsp;to&nbsp;00h&nbsp;when&nbsp;SOP2&nbsp;=&nbsp;FEh)<br>
+*&nbsp;DLEN&nbsp;-&nbsp;Data&nbsp;Length&nbsp;-&nbsp;The&nbsp;number&nbsp;of&nbsp;bytes&nbsp;following&nbsp;through&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;of&nbsp;the&nbsp;packet<br>
+*&nbsp;&lt;data&gt;<br>
+*&nbsp;CHK&nbsp;-&nbsp;Checksum&nbsp;-&nbsp;-&nbsp;The&nbsp;modulo&nbsp;256&nbsp;sum&nbsp;of&nbsp;all&nbsp;the&nbsp;bytes&nbsp;from&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DID&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;data&nbsp;payload,&nbsp;bit&nbsp;inverted&nbsp;(1's&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;complement)<br>
+&nbsp;<br>
+Asynchronous&nbsp;Packets&nbsp;are&nbsp;sent&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>&nbsp;-&gt;&nbsp;Client&nbsp;in&nbsp;the<br>
+following&nbsp;byte&nbsp;format::<br>
+&nbsp;<br>
+&nbsp;&nbsp;-------------------------------------------------------------<br>
+&nbsp;&nbsp;|SOP1&nbsp;|&nbsp;SOP2&nbsp;|&nbsp;ID&nbsp;CODE&nbsp;|&nbsp;DLEN-MSB&nbsp;|&nbsp;DLEN-LSB&nbsp;|&nbsp;&lt;data&gt;&nbsp;|&nbsp;CHK&nbsp;|<br>
+&nbsp;&nbsp;-------------------------------------------------------------<br>
+&nbsp;<br>
+*&nbsp;SOP1&nbsp;-&nbsp;Start&nbsp;Packet&nbsp;1&nbsp;-&nbsp;Always&nbsp;0xff.<br>
+*&nbsp;SOP2&nbsp;-&nbsp;Start&nbsp;Packet&nbsp;2&nbsp;-&nbsp;Set&nbsp;to&nbsp;0xff&nbsp;when&nbsp;this&nbsp;is&nbsp;an<br>
+&nbsp;&nbsp;acknowledgement,&nbsp;0xfe&nbsp;otherwise.<br>
+*&nbsp;ID&nbsp;CODE&nbsp;-&nbsp;ID&nbsp;Code&nbsp;-&nbsp;See&nbsp;the&nbsp;IDCODE&nbsp;dict<br>
+*&nbsp;DLEN-MSB&nbsp;-&nbsp;Data&nbsp;Length&nbsp;MSB&nbsp;-&nbsp;The&nbsp;MSB&nbsp;number&nbsp;of&nbsp;bytes&nbsp;following&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;packet<br>
+*&nbsp;DLEN-LSB&nbsp;-&nbsp;Data&nbsp;Length&nbsp;LSB&nbsp;-&nbsp;The&nbsp;LSB&nbsp;number&nbsp;of&nbsp;bytes&nbsp;following&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;packet<br>
+*&nbsp;&lt;data&gt;<br>
+*&nbsp;CHK&nbsp;-&nbsp;Checksum&nbsp;-&nbsp;-&nbsp;The&nbsp;modulo&nbsp;256&nbsp;sum&nbsp;of&nbsp;all&nbsp;the&nbsp;bytes&nbsp;from&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DID&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;data&nbsp;payload,&nbsp;bit&nbsp;inverted&nbsp;(1's&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;complement)</tt></dd></dl>
+
+<dl><dt><a name="Sphero-remove_async_callback"><strong>remove_async_callback</strong></a>(self, callback_type)</dt></dl>
+
+<dl><dt><a name="Sphero-remove_sync_callback"><strong>remove_sync_callback</strong></a>(self, callback_type)</dt></dl>
+
+<dl><dt><a name="Sphero-roll"><strong>roll</strong></a>(self, speed, heading, state, response)</dt><dd><tt>This&nbsp;commands&nbsp;<a href="#Sphero">Sphero</a>&nbsp;to&nbsp;roll&nbsp;along&nbsp;the&nbsp;provided&nbsp;vector.&nbsp;Both&nbsp;a<br>
+speed&nbsp;and&nbsp;a&nbsp;heading&nbsp;are&nbsp;required;&nbsp;the&nbsp;latter&nbsp;is&nbsp;considered<br>
+relative&nbsp;to&nbsp;the&nbsp;last&nbsp;calibrated&nbsp;direction.&nbsp;A&nbsp;state&nbsp;Boolean&nbsp;is&nbsp;also<br>
+provided&nbsp;(on&nbsp;or&nbsp;off).&nbsp;The&nbsp;client&nbsp;convention&nbsp;for&nbsp;heading&nbsp;follows&nbsp;the&nbsp;360<br>
+degrees&nbsp;on&nbsp;a&nbsp;circle,&nbsp;relative&nbsp;to&nbsp;the&nbsp;ball:&nbsp;0&nbsp;is&nbsp;straight&nbsp;ahead,&nbsp;90<br>
+is&nbsp;to&nbsp;the&nbsp;right,&nbsp;180&nbsp;is&nbsp;back&nbsp;and&nbsp;270&nbsp;is&nbsp;to&nbsp;the&nbsp;left.&nbsp;The&nbsp;valid<br>
+range&nbsp;is&nbsp;0..359.<br>
+&nbsp;<br>
+:param&nbsp;speed:&nbsp;0-255&nbsp;value&nbsp;representing&nbsp;0-max&nbsp;speed&nbsp;of&nbsp;the&nbsp;sphero.<br>
+:param&nbsp;heading:&nbsp;heading&nbsp;in&nbsp;degrees&nbsp;from&nbsp;0&nbsp;to&nbsp;359.<br>
+:param&nbsp;state:&nbsp;00h&nbsp;for&nbsp;off&nbsp;(braking)&nbsp;and&nbsp;01h&nbsp;for&nbsp;on&nbsp;(driving).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-run"><strong>run</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-run_l1_diags"><strong>run_l1_diags</strong></a>(self, response)</dt><dd><tt>This&nbsp;is&nbsp;a&nbsp;developer-level&nbsp;command&nbsp;to&nbsp;help&nbsp;diagnose&nbsp;aberrant<br>
+behavior.&nbsp;Most&nbsp;system&nbsp;counters,&nbsp;process&nbsp;flags,&nbsp;and&nbsp;system&nbsp;states<br>
+are&nbsp;decoded&nbsp;into&nbsp;human&nbsp;readable&nbsp;ASCII.&nbsp;There&nbsp;are&nbsp;two&nbsp;responses&nbsp;to<br>
+this&nbsp;command:&nbsp;a&nbsp;Simple&nbsp;Response&nbsp;followed&nbsp;by&nbsp;a&nbsp;large&nbsp;async&nbsp;message<br>
+containing&nbsp;the&nbsp;results&nbsp;of&nbsp;the&nbsp;diagnostic&nbsp;tests.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-run_l2_diags"><strong>run_l2_diags</strong></a>(self, response)</dt><dd><tt>This&nbsp;is&nbsp;a&nbsp;developers-only&nbsp;command&nbsp;to&nbsp;help&nbsp;diagnose&nbsp;aberrant<br>
+behavior.&nbsp;It&nbsp;is&nbsp;much&nbsp;less&nbsp;impactful&nbsp;than&nbsp;the&nbsp;Level&nbsp;1&nbsp;command&nbsp;as&nbsp;it<br>
+doesn't&nbsp;interfere&nbsp;with&nbsp;the&nbsp;current&nbsp;operation&nbsp;it&nbsp;simply&nbsp;returns&nbsp;a<br>
+current&nbsp;set&nbsp;of&nbsp;statistics&nbsp;to&nbsp;the&nbsp;client.<br>
+&nbsp;<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-send"><strong>send</strong></a>(self, data, response)</dt><dd><tt>Packets&nbsp;are&nbsp;sent&nbsp;from&nbsp;Client&nbsp;-&gt;&nbsp;<a href="#Sphero">Sphero</a>&nbsp;in&nbsp;the&nbsp;following&nbsp;byte&nbsp;format::<br>
+&nbsp;<br>
+&nbsp;&nbsp;-------------------------------------------------------<br>
+&nbsp;&nbsp;|&nbsp;SOP1&nbsp;|&nbsp;SOP2&nbsp;|&nbsp;DID&nbsp;|&nbsp;CID&nbsp;|&nbsp;SEQ&nbsp;|&nbsp;DLEN&nbsp;|&nbsp;&lt;data&gt;&nbsp;|&nbsp;CHK&nbsp;|<br>
+&nbsp;&nbsp;-------------------------------------------------------<br>
+&nbsp;<br>
+*&nbsp;SOP1&nbsp;-&nbsp;start&nbsp;packet&nbsp;1&nbsp;-&nbsp;Always&nbsp;0xff.<br>
+*&nbsp;SOP2&nbsp;-&nbsp;start&nbsp;packet&nbsp;2&nbsp;-&nbsp;Set&nbsp;to&nbsp;0xff&nbsp;when&nbsp;an&nbsp;acknowledgement&nbsp;is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expected,&nbsp;0xfe&nbsp;otherwise.<br>
+*&nbsp;DID&nbsp;-&nbsp;Device&nbsp;ID<br>
+*&nbsp;CID&nbsp;-&nbsp;Command&nbsp;ID<br>
+*&nbsp;SEQ&nbsp;-&nbsp;Sequence&nbsp;Number&nbsp;-&nbsp;This&nbsp;client&nbsp;field&nbsp;is&nbsp;echoed&nbsp;in&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response&nbsp;for&nbsp;all&nbsp;synchronous&nbsp;commands&nbsp;(and&nbsp;ignored&nbsp;by&nbsp;<a href="#Sphero">Sphero</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;SOP2&nbsp;=&nbsp;0xfe)<br>
+*&nbsp;DLEN&nbsp;-&nbsp;Data<br>
+*&nbsp;Length&nbsp;-&nbsp;Number&nbsp;of&nbsp;bytes&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;packet.<br>
+*&nbsp;&lt;data&gt;<br>
+*&nbsp;CHK&nbsp;-&nbsp;Checksum&nbsp;-&nbsp;The&nbsp;modulo&nbsp;256&nbsp;sum&nbsp;of&nbsp;all&nbsp;the&nbsp;bytes&nbsp;from&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DID&nbsp;through&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;data&nbsp;payload,&nbsp;bit&nbsp;inverted&nbsp;(1's&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;complement).</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_all_data_strm"><strong>set_all_data_strm</strong></a>(self, sample_div, sample_frames, pcnt, response)</dt><dd><tt>Helper&nbsp;function&nbsp;to&nbsp;add&nbsp;all&nbsp;the&nbsp;data&nbsp;to&nbsp;the&nbsp;data&nbsp;strm&nbsp;mask,&nbsp;so<br>
+that&nbsp;the&nbsp;user&nbsp;doesn't&nbsp;have&nbsp;to&nbsp;set&nbsp;the&nbsp;data&nbsp;strm&nbsp;manually.<br>
+&nbsp;<br>
+:param&nbsp;sample_div:&nbsp;divisor&nbsp;of&nbsp;the&nbsp;maximum&nbsp;sensor&nbsp;sampling&nbsp;rate.<br>
+:param&nbsp;sample_frames:&nbsp;number&nbsp;of&nbsp;sample&nbsp;frames&nbsp;emitted&nbsp;per&nbsp;packet.<br>
+:param&nbsp;pcnt:&nbsp;packet&nbsp;count&nbsp;(set&nbsp;to&nbsp;0&nbsp;for&nbsp;unlimited&nbsp;streaming).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_app_config_blk"><strong>set_app_config_blk</strong></a>(self, app_data, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;write&nbsp;a&nbsp;32&nbsp;byte&nbsp;block&nbsp;of&nbsp;data&nbsp;from&nbsp;the<br>
+configuration&nbsp;block&nbsp;that&nbsp;is&nbsp;set&nbsp;aside&nbsp;for&nbsp;exclusive&nbsp;use&nbsp;by<br>
+applications.<br>
+&nbsp;<br>
+:param&nbsp;app_data:&nbsp;block&nbsp;set&nbsp;aside&nbsp;for&nbsp;application.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_auto_reconnect"><strong>set_auto_reconnect</strong></a>(self, enable, time, response)</dt><dd><tt>This&nbsp;configures&nbsp;the&nbsp;control&nbsp;of&nbsp;the&nbsp;Bluetooth&nbsp;module&nbsp;in&nbsp;its&nbsp;attempt<br>
+to&nbsp;automatically&nbsp;reconnect&nbsp;with&nbsp;the&nbsp;last&nbsp;iPhone&nbsp;device.&nbsp;This&nbsp;is&nbsp;a<br>
+courtesy&nbsp;behavior&nbsp;since&nbsp;the&nbsp;iPhone&nbsp;Bluetooth&nbsp;stack&nbsp;doesn't&nbsp;initiate<br>
+automatic&nbsp;reconnection&nbsp;on&nbsp;its&nbsp;own.&nbsp;&nbsp;The&nbsp;two&nbsp;parameters&nbsp;are&nbsp;simple:<br>
+flag&nbsp;=&nbsp;00h&nbsp;to&nbsp;disable&nbsp;or&nbsp;01h&nbsp;to&nbsp;enable,&nbsp;and&nbsp;time&nbsp;=&nbsp;the&nbsp;number&nbsp;of<br>
+seconds&nbsp;after&nbsp;power-up&nbsp;in&nbsp;which&nbsp;to&nbsp;enable&nbsp;auto&nbsp;reconnect&nbsp;mode.&nbsp;For<br>
+example,&nbsp;if&nbsp;time&nbsp;=&nbsp;30&nbsp;then&nbsp;the&nbsp;module&nbsp;will&nbsp;be&nbsp;attempt&nbsp;reconnecting&nbsp;30<br>
+seconds&nbsp;after&nbsp;waking&nbsp;up.<br>
+&nbsp;<br>
+:param&nbsp;enable:&nbsp;00h&nbsp;to&nbsp;disable&nbsp;or&nbsp;01h&nbsp;to&nbsp;enable&nbsp;auto&nbsp;reconnecting.<br>
+:param&nbsp;time:&nbsp;the&nbsp;number&nbsp;of&nbsp;seconds&nbsp;after&nbsp;power-up&nbsp;in&nbsp;which&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enable&nbsp;auto&nbsp;reconnect&nbsp;mode<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_back_led"><strong>set_back_led</strong></a>(self, brightness, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;control&nbsp;the&nbsp;brightness&nbsp;of&nbsp;the&nbsp;back&nbsp;LED.&nbsp;The<br>
+value&nbsp;does&nbsp;not&nbsp;persist&nbsp;across&nbsp;power&nbsp;cycles.<br>
+&nbsp;<br>
+:param&nbsp;brightness:&nbsp;0-255,&nbsp;off-on&nbsp;(the&nbsp;blue&nbsp;LED&nbsp;on&nbsp;hemisphere&nbsp;of&nbsp;the&nbsp;<a href="#Sphero">Sphero</a>).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_data_strm"><strong>set_data_strm</strong></a>(self, sample_div, sample_frames, sample_mask1, pcnt, sample_mask2, response)</dt><dd><tt>Currently&nbsp;the&nbsp;control&nbsp;system&nbsp;runs&nbsp;at&nbsp;400Hz&nbsp;and&nbsp;because&nbsp;it's&nbsp;pretty<br>
+unlikely&nbsp;you&nbsp;will&nbsp;want&nbsp;to&nbsp;see&nbsp;data&nbsp;at&nbsp;that&nbsp;rate,&nbsp;N&nbsp;allows&nbsp;you&nbsp;to<br>
+divide&nbsp;that&nbsp;down.&nbsp;sample_div&nbsp;=&nbsp;2&nbsp;yields&nbsp;data&nbsp;samples&nbsp;at&nbsp;200Hz,<br>
+sample_div&nbsp;=&nbsp;10,&nbsp;40Hz,&nbsp;etc.&nbsp;Every&nbsp;data&nbsp;sample&nbsp;consists&nbsp;of&nbsp;a<br>
+"frame"&nbsp;made&nbsp;up&nbsp;of&nbsp;the&nbsp;individual&nbsp;sensor&nbsp;values&nbsp;as&nbsp;defined&nbsp;by&nbsp;the<br>
+sample_mask.&nbsp;The&nbsp;sample_frames&nbsp;value&nbsp;defines&nbsp;how&nbsp;many&nbsp;frames&nbsp;to<br>
+collect&nbsp;in&nbsp;memory&nbsp;before&nbsp;the&nbsp;packet&nbsp;is&nbsp;emitted.&nbsp;In&nbsp;this&nbsp;sense,&nbsp;it<br>
+controls&nbsp;the&nbsp;latency&nbsp;of&nbsp;the&nbsp;data&nbsp;you&nbsp;receive.&nbsp;Increasing<br>
+sample_div&nbsp;and&nbsp;the&nbsp;number&nbsp;of&nbsp;bits&nbsp;set&nbsp;in&nbsp;sample_mask&nbsp;drive&nbsp;the<br>
+required&nbsp;throughput.&nbsp;You&nbsp;should&nbsp;experiment&nbsp;with&nbsp;different&nbsp;values<br>
+of&nbsp;sample_div,&nbsp;sample_frames&nbsp;and&nbsp;sample_mask&nbsp;to&nbsp;see&nbsp;what&nbsp;works<br>
+best&nbsp;for&nbsp;you.<br>
+&nbsp;<br>
+:param&nbsp;sample_div:&nbsp;divisor&nbsp;of&nbsp;the&nbsp;maximum&nbsp;sensor&nbsp;sampling&nbsp;rate.<br>
+:param&nbsp;sample_frames:&nbsp;number&nbsp;of&nbsp;sample&nbsp;frames&nbsp;emitted&nbsp;per&nbsp;packet.<br>
+:param&nbsp;sample_mask1:&nbsp;bitwise&nbsp;selector&nbsp;of&nbsp;data&nbsp;sources&nbsp;to&nbsp;stream.<br>
+:param&nbsp;pcnt:&nbsp;packet&nbsp;count&nbsp;(set&nbsp;to&nbsp;0&nbsp;for&nbsp;unlimited&nbsp;streaming).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_device_name"><strong>set_device_name</strong></a>(self, name, response)</dt><dd><tt>This&nbsp;assigned&nbsp;name&nbsp;is&nbsp;held&nbsp;internally&nbsp;and&nbsp;produced&nbsp;as&nbsp;part&nbsp;of&nbsp;the<br>
+Get&nbsp;Bluetooth&nbsp;Info&nbsp;service&nbsp;below.&nbsp;Names&nbsp;are&nbsp;clipped&nbsp;at&nbsp;48<br>
+characters&nbsp;in&nbsp;length&nbsp;to&nbsp;support&nbsp;UTF-8&nbsp;sequences;&nbsp;you&nbsp;can&nbsp;send<br>
+something&nbsp;longer&nbsp;but&nbsp;the&nbsp;extra&nbsp;will&nbsp;be&nbsp;discarded.&nbsp;This&nbsp;field<br>
+defaults&nbsp;to&nbsp;the&nbsp;Bluetooth&nbsp;advertising&nbsp;name.<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;48&nbsp;character&nbsp;name.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_filtered_data_strm"><strong>set_filtered_data_strm</strong></a>(self, sample_div, sample_frames, pcnt, response)</dt><dd><tt>Helper&nbsp;function&nbsp;to&nbsp;add&nbsp;all&nbsp;the&nbsp;filtered&nbsp;data&nbsp;to&nbsp;the&nbsp;data&nbsp;strm<br>
+mask,&nbsp;so&nbsp;that&nbsp;the&nbsp;user&nbsp;doesn't&nbsp;have&nbsp;to&nbsp;set&nbsp;the&nbsp;data&nbsp;strm&nbsp;manually.<br>
+&nbsp;<br>
+:param&nbsp;sample_div:&nbsp;divisor&nbsp;of&nbsp;the&nbsp;maximum&nbsp;sensor&nbsp;sampling&nbsp;rate.<br>
+:param&nbsp;sample_frames:&nbsp;number&nbsp;of&nbsp;sample&nbsp;frames&nbsp;emitted&nbsp;per&nbsp;packet.<br>
+:param&nbsp;pcnt:&nbsp;packet&nbsp;count&nbsp;(set&nbsp;to&nbsp;0&nbsp;for&nbsp;unlimited&nbsp;streaming).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_heading"><strong>set_heading</strong></a>(self, heading, response)</dt><dd><tt>This&nbsp;allows&nbsp;the&nbsp;client&nbsp;to&nbsp;adjust&nbsp;the&nbsp;orientation&nbsp;of&nbsp;<a href="#Sphero">Sphero</a>&nbsp;by<br>
+commanding&nbsp;a&nbsp;new&nbsp;reference&nbsp;heading&nbsp;in&nbsp;degrees,&nbsp;which&nbsp;ranges&nbsp;from&nbsp;0<br>
+to&nbsp;359.&nbsp;You&nbsp;will&nbsp;see&nbsp;the&nbsp;ball&nbsp;respond&nbsp;immediately&nbsp;to&nbsp;this&nbsp;command<br>
+if&nbsp;stabilization&nbsp;is&nbsp;enabled.<br>
+&nbsp;<br>
+:param&nbsp;heading:&nbsp;heading&nbsp;in&nbsp;degrees&nbsp;from&nbsp;0&nbsp;to&nbsp;359&nbsp;(motion&nbsp;will&nbsp;be&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortest&nbsp;angular&nbsp;distance&nbsp;to&nbsp;heading&nbsp;command)<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_power_notify"><strong>set_power_notify</strong></a>(self, enable, response)</dt><dd><tt>This&nbsp;enables&nbsp;<a href="#Sphero">Sphero</a>&nbsp;to&nbsp;asynchronously&nbsp;notify&nbsp;the&nbsp;Client<br>
+periodically&nbsp;with&nbsp;the&nbsp;power&nbsp;state&nbsp;or&nbsp;immediately&nbsp;when&nbsp;the&nbsp;power<br>
+manager&nbsp;detects&nbsp;a&nbsp;state&nbsp;change.&nbsp;Timed&nbsp;notifications&nbsp;arrive&nbsp;every&nbsp;10<br>
+seconds&nbsp;until&nbsp;they're&nbsp;explicitly&nbsp;disabled&nbsp;or&nbsp;<a href="#Sphero">Sphero</a>&nbsp;is&nbsp;unpaired.&nbsp;The<br>
+flag&nbsp;is&nbsp;as&nbsp;you&nbsp;would&nbsp;expect,&nbsp;00h&nbsp;to&nbsp;disable&nbsp;and&nbsp;01h&nbsp;to&nbsp;enable.<br>
+&nbsp;<br>
+:param&nbsp;enable:&nbsp;00h&nbsp;to&nbsp;disable&nbsp;and&nbsp;01h&nbsp;to&nbsp;enable&nbsp;power&nbsp;notifications.<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_raw_data_strm"><strong>set_raw_data_strm</strong></a>(self, sample_div, sample_frames, pcnt, response)</dt><dd><tt>Helper&nbsp;function&nbsp;to&nbsp;add&nbsp;all&nbsp;the&nbsp;raw&nbsp;data&nbsp;to&nbsp;the&nbsp;data&nbsp;strm&nbsp;mask,&nbsp;so<br>
+that&nbsp;the&nbsp;user&nbsp;doesn't&nbsp;have&nbsp;to&nbsp;set&nbsp;the&nbsp;data&nbsp;strm&nbsp;manually.<br>
+&nbsp;<br>
+:param&nbsp;sample_div:&nbsp;divisor&nbsp;of&nbsp;the&nbsp;maximum&nbsp;sensor&nbsp;sampling&nbsp;rate.<br>
+:param&nbsp;sample_frames:&nbsp;number&nbsp;of&nbsp;sample&nbsp;frames&nbsp;emitted&nbsp;per&nbsp;packet.<br>
+:param&nbsp;pcnt:&nbsp;packet&nbsp;count&nbsp;(set&nbsp;to&nbsp;0&nbsp;for&nbsp;unlimited&nbsp;streaming).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_raw_motor_values"><strong>set_raw_motor_values</strong></a>(self, l_mode, l_power, r_mode, r_power, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;take&nbsp;over&nbsp;one&nbsp;or&nbsp;both&nbsp;of&nbsp;the&nbsp;motor&nbsp;output<br>
+values,&nbsp;instead&nbsp;of&nbsp;having&nbsp;the&nbsp;stabilization&nbsp;system&nbsp;control<br>
+them.&nbsp;Each&nbsp;motor&nbsp;(left&nbsp;and&nbsp;right)&nbsp;requires&nbsp;a&nbsp;mode&nbsp;(see&nbsp;below)&nbsp;and<br>
+a&nbsp;power&nbsp;value&nbsp;from&nbsp;0-&nbsp;255.&nbsp;This&nbsp;command&nbsp;will&nbsp;disable&nbsp;stabilization<br>
+if&nbsp;both&nbsp;modes&nbsp;aren't&nbsp;"ignore"&nbsp;so&nbsp;you'll&nbsp;need&nbsp;to&nbsp;re-enable&nbsp;it&nbsp;via<br>
+CID&nbsp;02h&nbsp;once&nbsp;you're&nbsp;done.<br>
+&nbsp;<br>
+:param&nbsp;mode:&nbsp;0x00&nbsp;-&nbsp;off,&nbsp;0x01&nbsp;-&nbsp;forward,&nbsp;0x02&nbsp;-&nbsp;reverse,&nbsp;0x03&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brake,&nbsp;0x04&nbsp;-&nbsp;ignored.<br>
+:param&nbsp;power:&nbsp;0-255&nbsp;scalar&nbsp;value&nbsp;(units?).</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_rgb_led"><strong>set_rgb_led</strong></a>(self, red, green, blue, save, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;set&nbsp;the&nbsp;RGB&nbsp;LED&nbsp;color.&nbsp;The&nbsp;composite&nbsp;value&nbsp;is<br>
+stored&nbsp;as&nbsp;the&nbsp;"application&nbsp;LED&nbsp;color"&nbsp;and&nbsp;immediately&nbsp;driven&nbsp;to<br>
+the&nbsp;LED&nbsp;(if&nbsp;not&nbsp;overridden&nbsp;by&nbsp;a&nbsp;macro&nbsp;or&nbsp;orbBasic&nbsp;operation).&nbsp;If<br>
+FLAG&nbsp;is&nbsp;true,&nbsp;the&nbsp;value&nbsp;is&nbsp;also&nbsp;saved&nbsp;as&nbsp;the&nbsp;"user&nbsp;LED&nbsp;color"<br>
+which&nbsp;persists&nbsp;across&nbsp;power&nbsp;cycles&nbsp;and&nbsp;is&nbsp;rendered&nbsp;in&nbsp;the&nbsp;gap<br>
+between&nbsp;an&nbsp;application&nbsp;connecting&nbsp;and&nbsp;sending&nbsp;this&nbsp;command.<br>
+&nbsp;<br>
+:param&nbsp;red:&nbsp;red&nbsp;color&nbsp;value.<br>
+:param&nbsp;green:&nbsp;green&nbsp;color&nbsp;value.<br>
+:param&nbsp;blue:&nbsp;blue&nbsp;color&nbsp;value.<br>
+:param&nbsp;save:&nbsp;01h&nbsp;for&nbsp;save&nbsp;(color&nbsp;is&nbsp;saved&nbsp;as&nbsp;"user&nbsp;LED&nbsp;color").</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_rotation_rate"><strong>set_rotation_rate</strong></a>(self, rate, response)</dt><dd><tt>This&nbsp;allows&nbsp;you&nbsp;to&nbsp;control&nbsp;the&nbsp;rotation&nbsp;rate&nbsp;that&nbsp;<a href="#Sphero">Sphero</a>&nbsp;will&nbsp;use<br>
+to&nbsp;meet&nbsp;new&nbsp;heading&nbsp;commands.&nbsp;The&nbsp;commanded&nbsp;value&nbsp;is&nbsp;in&nbsp;units&nbsp;of<br>
+0.784&nbsp;degrees/sec.&nbsp;So,&nbsp;setting&nbsp;a&nbsp;value&nbsp;of&nbsp;c8h&nbsp;will&nbsp;set&nbsp;the<br>
+rotation&nbsp;rate&nbsp;to&nbsp;157&nbsp;degrees/sec.&nbsp;A&nbsp;value&nbsp;of&nbsp;255&nbsp;jumps&nbsp;to&nbsp;the<br>
+maximum&nbsp;and&nbsp;a&nbsp;value&nbsp;of&nbsp;1&nbsp;is&nbsp;the&nbsp;minimum.<br>
+&nbsp;<br>
+:param&nbsp;rate:&nbsp;rotation&nbsp;rate&nbsp;in&nbsp;units&nbsp;of&nbsp;0.784degrees/sec&nbsp;(setting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;value&nbsp;will&nbsp;not&nbsp;cause&nbsp;the&nbsp;device&nbsp;to&nbsp;move&nbsp;only&nbsp;set&nbsp;the&nbsp;rate&nbsp;it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;move&nbsp;in&nbsp;other&nbsp;funcation&nbsp;calls).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-set_stablization"><strong>set_stablization</strong></a>(self, enable, response)</dt><dd><tt>This&nbsp;turns&nbsp;on&nbsp;or&nbsp;off&nbsp;the&nbsp;internal&nbsp;stabilization&nbsp;of&nbsp;<a href="#Sphero">Sphero</a>,&nbsp;in<br>
+which&nbsp;the&nbsp;IMU&nbsp;is&nbsp;used&nbsp;to&nbsp;match&nbsp;the&nbsp;ball's&nbsp;orientation&nbsp;to&nbsp;its<br>
+various&nbsp;set&nbsp;points.&nbsp;The&nbsp;flag&nbsp;value&nbsp;is&nbsp;as&nbsp;you&nbsp;would&nbsp;expect,&nbsp;00h&nbsp;for<br>
+off&nbsp;and&nbsp;01h&nbsp;for&nbsp;on.<br>
+&nbsp;<br>
+:param&nbsp;enable:&nbsp;00h&nbsp;for&nbsp;off&nbsp;and&nbsp;01h&nbsp;for&nbsp;on&nbsp;(on&nbsp;by&nbsp;default).<br>
+:param&nbsp;response:&nbsp;request&nbsp;response&nbsp;back&nbsp;from&nbsp;<a href="#Sphero">Sphero</a>.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="threading.html#Thread">threading.Thread</a>:<br>
+<dl><dt><a name="Sphero-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-getName"><strong>getName</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-isAlive"><strong>isAlive</strong></a>(self)</dt><dd><tt>Return&nbsp;whether&nbsp;the&nbsp;thread&nbsp;is&nbsp;alive.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;returns&nbsp;True&nbsp;just&nbsp;before&nbsp;the&nbsp;<a href="#Sphero-run">run</a>()&nbsp;method&nbsp;starts&nbsp;until&nbsp;just<br>
+after&nbsp;the&nbsp;<a href="#Sphero-run">run</a>()&nbsp;method&nbsp;terminates.&nbsp;The&nbsp;module&nbsp;function&nbsp;enumerate()<br>
+returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;alive&nbsp;threads.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-isDaemon"><strong>isDaemon</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sphero-is_alive"><strong>is_alive</strong></a> = isAlive(self)</dt><dd><tt>Return&nbsp;whether&nbsp;the&nbsp;thread&nbsp;is&nbsp;alive.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;returns&nbsp;True&nbsp;just&nbsp;before&nbsp;the&nbsp;<a href="#Sphero-run">run</a>()&nbsp;method&nbsp;starts&nbsp;until&nbsp;just<br>
+after&nbsp;the&nbsp;<a href="#Sphero-run">run</a>()&nbsp;method&nbsp;terminates.&nbsp;The&nbsp;module&nbsp;function&nbsp;enumerate()<br>
+returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;alive&nbsp;threads.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-join"><strong>join</strong></a>(self, timeout<font color="#909090">=None</font>)</dt><dd><tt>Wait&nbsp;until&nbsp;the&nbsp;thread&nbsp;terminates.<br>
+&nbsp;<br>
+This&nbsp;blocks&nbsp;the&nbsp;calling&nbsp;thread&nbsp;until&nbsp;the&nbsp;thread&nbsp;whose&nbsp;<a href="#Sphero-join">join</a>()&nbsp;method&nbsp;is<br>
+called&nbsp;terminates&nbsp;--&nbsp;either&nbsp;normally&nbsp;or&nbsp;through&nbsp;an&nbsp;unhandled&nbsp;exception<br>
+or&nbsp;until&nbsp;the&nbsp;optional&nbsp;timeout&nbsp;occurs.<br>
+&nbsp;<br>
+When&nbsp;the&nbsp;timeout&nbsp;argument&nbsp;is&nbsp;present&nbsp;and&nbsp;not&nbsp;None,&nbsp;it&nbsp;should&nbsp;be&nbsp;a<br>
+floating&nbsp;point&nbsp;number&nbsp;specifying&nbsp;a&nbsp;timeout&nbsp;for&nbsp;the&nbsp;operation&nbsp;in&nbsp;seconds<br>
+(or&nbsp;fractions&nbsp;thereof).&nbsp;As&nbsp;<a href="#Sphero-join">join</a>()&nbsp;always&nbsp;returns&nbsp;None,&nbsp;you&nbsp;must&nbsp;call<br>
+<a href="#Sphero-isAlive">isAlive</a>()&nbsp;after&nbsp;<a href="#Sphero-join">join</a>()&nbsp;to&nbsp;decide&nbsp;whether&nbsp;a&nbsp;timeout&nbsp;happened&nbsp;--&nbsp;if&nbsp;the<br>
+thread&nbsp;is&nbsp;still&nbsp;alive,&nbsp;the&nbsp;<a href="#Sphero-join">join</a>()&nbsp;call&nbsp;timed&nbsp;out.<br>
+&nbsp;<br>
+When&nbsp;the&nbsp;timeout&nbsp;argument&nbsp;is&nbsp;not&nbsp;present&nbsp;or&nbsp;None,&nbsp;the&nbsp;operation&nbsp;will<br>
+block&nbsp;until&nbsp;the&nbsp;thread&nbsp;terminates.<br>
+&nbsp;<br>
+A&nbsp;thread&nbsp;can&nbsp;be&nbsp;<a href="#Sphero-join">join</a>()ed&nbsp;many&nbsp;times.<br>
+&nbsp;<br>
+<a href="#Sphero-join">join</a>()&nbsp;raises&nbsp;a&nbsp;RuntimeError&nbsp;if&nbsp;an&nbsp;attempt&nbsp;is&nbsp;made&nbsp;to&nbsp;join&nbsp;the&nbsp;current<br>
+thread&nbsp;as&nbsp;that&nbsp;would&nbsp;cause&nbsp;a&nbsp;deadlock.&nbsp;It&nbsp;is&nbsp;also&nbsp;an&nbsp;error&nbsp;to&nbsp;<a href="#Sphero-join">join</a>()&nbsp;a<br>
+thread&nbsp;before&nbsp;it&nbsp;has&nbsp;been&nbsp;started&nbsp;and&nbsp;attempts&nbsp;to&nbsp;do&nbsp;so&nbsp;raises&nbsp;the&nbsp;same<br>
+exception.</tt></dd></dl>
+
+<dl><dt><a name="Sphero-setDaemon"><strong>setDaemon</strong></a>(self, daemonic)</dt></dl>
+
+<dl><dt><a name="Sphero-setName"><strong>setName</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="Sphero-start"><strong>start</strong></a>(self)</dt><dd><tt>Start&nbsp;the&nbsp;thread's&nbsp;activity.<br>
+&nbsp;<br>
+It&nbsp;must&nbsp;be&nbsp;called&nbsp;at&nbsp;most&nbsp;once&nbsp;per&nbsp;thread&nbsp;object.&nbsp;It&nbsp;arranges&nbsp;for&nbsp;the<br>
+object's&nbsp;<a href="#Sphero-run">run</a>()&nbsp;method&nbsp;to&nbsp;be&nbsp;invoked&nbsp;in&nbsp;a&nbsp;separate&nbsp;thread&nbsp;of&nbsp;control.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;will&nbsp;raise&nbsp;a&nbsp;RuntimeError&nbsp;if&nbsp;called&nbsp;more&nbsp;than&nbsp;once&nbsp;on&nbsp;the<br>
+same&nbsp;thread&nbsp;object.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="threading.html#Thread">threading.Thread</a>:<br>
+<dl><dt><strong>daemon</strong></dt>
+<dd><tt>A&nbsp;boolean&nbsp;value&nbsp;indicating&nbsp;whether&nbsp;this&nbsp;thread&nbsp;is&nbsp;a&nbsp;daemon&nbsp;thread&nbsp;(True)&nbsp;or&nbsp;not&nbsp;(False).<br>
+&nbsp;<br>
+This&nbsp;must&nbsp;be&nbsp;set&nbsp;before&nbsp;start()&nbsp;is&nbsp;called,&nbsp;otherwise&nbsp;RuntimeError&nbsp;is<br>
+raised.&nbsp;Its&nbsp;initial&nbsp;value&nbsp;is&nbsp;inherited&nbsp;from&nbsp;the&nbsp;creating&nbsp;thread;&nbsp;the<br>
+main&nbsp;thread&nbsp;is&nbsp;not&nbsp;a&nbsp;daemon&nbsp;thread&nbsp;and&nbsp;therefore&nbsp;all&nbsp;threads&nbsp;created&nbsp;in<br>
+the&nbsp;main&nbsp;thread&nbsp;default&nbsp;to&nbsp;daemon&nbsp;=&nbsp;False.<br>
+&nbsp;<br>
+The&nbsp;entire&nbsp;Python&nbsp;program&nbsp;exits&nbsp;when&nbsp;no&nbsp;alive&nbsp;non-daemon&nbsp;threads&nbsp;are<br>
+left.</tt></dd>
+</dl>
+<dl><dt><strong>ident</strong></dt>
+<dd><tt>Thread&nbsp;identifier&nbsp;of&nbsp;this&nbsp;thread&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;has&nbsp;not&nbsp;been&nbsp;started.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;nonzero&nbsp;integer.&nbsp;See&nbsp;the&nbsp;thread.get_ident()&nbsp;function.&nbsp;Thread<br>
+identifiers&nbsp;may&nbsp;be&nbsp;recycled&nbsp;when&nbsp;a&nbsp;thread&nbsp;exits&nbsp;and&nbsp;another&nbsp;thread&nbsp;is<br>
+created.&nbsp;The&nbsp;identifier&nbsp;is&nbsp;available&nbsp;even&nbsp;after&nbsp;the&nbsp;thread&nbsp;has&nbsp;exited.</tt></dd>
+</dl>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>A&nbsp;string&nbsp;used&nbsp;for&nbsp;identification&nbsp;purposes&nbsp;only.<br>
+&nbsp;<br>
+It&nbsp;has&nbsp;no&nbsp;semantics.&nbsp;Multiple&nbsp;threads&nbsp;may&nbsp;be&nbsp;given&nbsp;the&nbsp;same&nbsp;name.&nbsp;The<br>
+initial&nbsp;name&nbsp;is&nbsp;set&nbsp;by&nbsp;the&nbsp;constructor.</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="threading.html#_Verbose">threading._Verbose</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-setAddress"><strong>setAddress</strong></a>(addr)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>IDCODE</strong> = {'COLLISION': '<font color="#c040c0">\x07</font>', 'CONFIG_BLOCK': '<font color="#c040c0">\x04</font>', 'DATA_STRM': '<font color="#c040c0">\x03</font>', 'LEVEL1_DIAG': '<font color="#c040c0">\x02</font>', 'MACRO_MARKERS': '<font color="#c040c0">\x06</font>', 'PWR_NOTIFY': '<font color="#c040c0">\x01</font>', 'SLEEP': '<font color="#c040c0">\x05</font>'}<br>
+<strong>MRSP</strong> = {'ORBOTIX_RSP_CODE_EBAD_CMD': 4, 'ORBOTIX_RSP_CODE_EBAD_DID': 9, 'ORBOTIX_RSP_CODE_EBAD_MSG': 6, 'ORBOTIX_RSP_CODE_ECHKSUM': 2, 'ORBOTIX_RSP_CODE_EEXEC': 8, 'ORBOTIX_RSP_CODE_EFRAG': 3, 'ORBOTIX_RSP_CODE_EGEN': 1, 'ORBOTIX_RSP_CODE_EPARAM': 7, 'ORBOTIX_RSP_CODE_EUNSUPP': 5, 'ORBOTIX_RSP_CODE_FLASH_FAIL': 51, ...}<br>
+<strong>RECV</strong> = {'ASYNC': ['<font color="#c040c0">\xff</font>', '<font color="#c040c0">\xfe</font>'], 'SYNC': ['<font color="#c040c0">\xff</font>', '<font color="#c040c0">\xff</font>']}<br>
+<strong>REQ</strong> = {'CMD_ABORT_MACRO': [2, 85], 'CMD_ASSIGN_COUNTER': [0, 80], 'CMD_BOOST': [2, 49], 'CMD_CFG_COL_DET': [2, 18], 'CMD_CLEAR_COUNTERS': [0, 66], 'CMD_DEL_MACRO': [2, 83], 'CMD_GET_APP_CONFIG_BLK': [2, 5], 'CMD_GET_AUTO_RECONNECT': [0, 19], 'CMD_GET_BT_NAME': [0, 17], 'CMD_GET_CONFIG_BLK': [2, 64], ...}<br>
+<strong>STRM_MASK1</strong> = {'ACCEL_X_FILTERED': 32768, 'ACCEL_X_RAW': 2147483648, 'ACCEL_Y_FILTERED': 16384, 'ACCEL_Y_RAW': 1073741824, 'ACCEL_Z_FILTERED': 8192, 'ACCEL_Z_RAW': 536870912, 'GYRO_H_FILTERED': 1, 'GYRO_L_FILTERED': 4, 'GYRO_M_FILTERED': 2, 'GYRO_X_FILTERED': 4096, ...}<br>
+<strong>STRM_MASK2</strong> = {'ACCELONE': 33554432, 'ODOM_X': 134217728, 'ODOM_Y': 67108864, 'QUATERNION_Q0': 2147483648, 'QUATERNION_Q1': 1073741824, 'QUATERNION_Q2': 536870912, 'QUATERNION_Q3': 268435456, 'VELOCITY_X': 16777216, 'VELOCITY_Y': 8388608}<br>
+<strong>bb8addr</strong> = 'EA:FE:40:7E:CA:0C'</td></tr></table>
+</body></html>

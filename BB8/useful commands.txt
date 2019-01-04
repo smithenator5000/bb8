@@ -1,0 +1,5 @@
+set_heading(heading, response); heading from 0 to 359 degrees, response boolean
+set_rotation_rate(rate, response); rate from 0 to 255 rad/s, response boolean
+set_rgb_led(red, green, blue, save, response); red, green, blue from 0 to 255
+roll(speed, heading, response)
+
